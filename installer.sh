@@ -2,7 +2,6 @@
 # Installer for CentOS systems by @lukapaunovic
 
 yum -y install epel-release
-yum -y update
 
 # Install ClamAV fully
 yum -y install clamav-server clamav-data clamav-update clamav-filesystem clamav clamav-scanner-systemd clamav-devel clamav-lib clamav-server-systemd
