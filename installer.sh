@@ -36,6 +36,9 @@ sh ./install.sh
 
 find /home/*/web/ -name 'public_*html' -type d > /usr/local/maldetect/monitor_paths
 
+# Cron
+echo "0 * * * * /usr/bin/find /home/*/web/ -name 'public_*html' -type d > /usr/local/maldetect/monitor_paths" >> /var/spool/cron/root
+
 # Configure Maldet
 
 sed -i 's/quarantine_hits=\"0\"/quarantine_hits=\"1\"/g' /usr/local/maldetect/conf.maldet
